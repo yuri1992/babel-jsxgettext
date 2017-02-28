@@ -29,6 +29,7 @@ var inputs = cli.input.slice(0, cli.input.length - 1)
 var output = cli.flags.o || cli.flags.output || cli.input[cli.input.length - 1]
 output = path.join(process.cwd(), output)
 
+console.log(inputs);
 parser(inputs, output, plugins, function (err) {
   if (err) throw err
   console.log('Job completed!')
