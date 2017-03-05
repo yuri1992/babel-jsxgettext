@@ -35,7 +35,7 @@ function parser(inputs, output, plugins, cb) {
     var headers = data.headers
     headers['plural-forms'] = headers['plural-forms'] || DEFAULT_HEADERS['plural-forms']
     headers['content-type'] = headers['content-type'] || DEFAULT_HEADERS['content-type']
-
+    console.log(headers);
     var nplurals = /nplurals ?= ?(\d)/.exec(headers['plural-forms'])[1]
 
     walker = folderWalk.walk(inputs[0], {
